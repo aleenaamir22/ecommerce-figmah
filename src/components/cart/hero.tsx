@@ -37,7 +37,7 @@ function ShopHero() {
               marginBottom: '1rem',
             }}
           >
-            Our Shop
+            Our Cart
           </h1>
           <div
             style={{
@@ -68,7 +68,7 @@ function ShopHero() {
                 textDecoration: 'none',
               }}
             >
-              Shop
+              Cart
             </Link>
           </div>
         </div>

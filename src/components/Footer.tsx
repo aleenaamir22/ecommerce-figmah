@@ -5,6 +5,7 @@ import { PiClockClockwiseBold } from "react-icons/pi";
 import recentPost1 from "../../public/recentPost.png";
 import recentPost2 from "../../public/recentPost.png";
 import recentPost3 from "../../public/recentPost.png";
+import Link from "next/link"; // Import Link from Next.js
 
 const Footer = () => {
   return (
@@ -73,11 +74,18 @@ const Footer = () => {
               Useful Links
             </h2>
             <ul className="text-[#FFFFFF] font-medium">
-              {["About", "News", "Partner", "Team", "Menu", "Contact"].map((link) => (
-                <li key={link} className="mb-4">
-                  <a href="#" className="hover:underline">
-                    {link}
-                  </a>
+              {[
+                { name: "About", path: "/about" },
+                { name: "News", path: "/news" },
+                { name: "Partner", path: "/partner" },
+                { name: "Team", path: "/team" },
+                { name: "Menu", path: "/menu" },
+                { name: "Contact", path: "/contact" },
+              ].map((link) => (
+                <li key={link.name} className="mb-4">
+                  <Link href={link.path} className="hover:underline">
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -89,14 +97,21 @@ const Footer = () => {
               Help?
             </h2>
             <ul className="text-[#FFFFFF] font-medium">
-              {["FAQ", "Terms & Conditions", "Reporting", "Documentation", "Support Policy", "Privacy"].map((item) => (
-                <li key={item} className="mb-4">
-                  <a href="#" className="hover:underline">
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
+  {[
+    { name: "FAQ", path: "/faq" },
+    { name: "Term and Conditions", path: "/conditions" },
+    { name: "Reporting", path: "/reporting" },
+    { name: "Documentation", path: "/documentation" },
+    { name: "Support Policy", path: "/support" },
+    { name: "Privacy Policy", path: "/privacy" },
+  ].map((link) => (
+    <li key={link.name} className="mb-4">
+      <a href={link.path} className="hover:underline">
+        {link.name}
+      </a>
+    </li>
+  ))}
+</ul>
           </div>
 
           {/* Recent Posts */}

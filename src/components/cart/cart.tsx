@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import Image from "next/image";
+import Link from "next/link";
+
 
 const initialCartItems = [
   { name: "Burger", price: 10.99, quantity: 2, image: "/cart1.png" },
@@ -28,8 +30,8 @@ const ShoppingCart: React.FC = () => {
   };
 
   const handleApplyCoupon = () => {
-    if (couponCode === "DISCOUNT10") {
-      setDiscount(0.1); // 10% discount
+    if (couponCode === "DISCOUNT20") {
+      setDiscount(0.2); // 20% discount
     } else {
       setDiscount(0);
     }
@@ -42,7 +44,6 @@ const ShoppingCart: React.FC = () => {
   return (
     <div style={{ backgroundColor: "white", fontFamily: "sans-serif" }}>
       <header style={{
-        backgroundImage: 'url(/path/to/header-bg.jpg)',
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "12rem",
@@ -92,7 +93,8 @@ const ShoppingCart: React.FC = () => {
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "flex-start", marginTop: "2.5rem", gap: "1.5rem" }}>
           <div style={{ width: "100%", maxWidth: "50%", marginBottom: "1.5rem" }}>
             <h2 style={{ fontSize: "1.125rem", fontWeight: "600", marginBottom: "0.5rem" }}>Coupon Code</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt unde ratione eius voluptates. Quae quisquam nam ullam ea corrupti voluptates voluptatibus quis, deserunt nobis velit, minus, natus expedita sed debitis?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt unde ratione eius voluptates. Quae quisquam nam ullam ea corrupti voluptates voluptatibus quis, deserunt nobis velit, minus, natus expedita sed debitis?<br></br> Coupon Code:DISCOUNT20
+            </p>
             <div style={{ display: "flex", alignItems: "center" }}>
               <input
                 type="text"
@@ -134,18 +136,20 @@ const ShoppingCart: React.FC = () => {
                 <span>Total Amount</span>
                 <span>${totalAmount.toFixed(2)}</span>
               </div>
+             
               <button style={{
-                width: "100%",
-                backgroundColor: "#FF9F0D",
-                color: "white",
-                marginTop: "1rem",
-                padding: "1rem",
-                borderRadius: "0.375rem",
-                fontWeight: "600"
-              }}>
-                Proceed to Checkout
-              </button>
-            </div>
+           width: "100%",
+  backgroundColor: "#FF9F0D",
+  color: "white",
+  marginTop: "1rem",
+  padding: "1rem",
+  borderRadius: "0.375rem",
+  fontWeight: "600"
+}}><Link href='checkout' style={{color:"white"}}>
+  Proceed to Checkout</Link>
+</button>
+
+              </div>
           </div>
         </div>
       </main>

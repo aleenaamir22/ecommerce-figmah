@@ -1,15 +1,14 @@
-import ShoppingCart from '@/components/Shop/cart'
-import ShopHero from '@/components/Shop/hero'
-
+import ProductHero from '@/components/products/Hero'
+import ProductList from '@/components/products/ProductList'
 import React from 'react'
 
-const Shop = () => {
+const shop = () => {
   return (
     <div>
-      <ShopHero/>
-      <ShoppingCart/>
+      <ProductHero/>
+      <ProductList/>
     </div>
   )
 }
 
-export default Shop
+export default shop
