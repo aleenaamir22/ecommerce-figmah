@@ -1,3 +1,30 @@
+ Hackathon 3 Journey
+Day 1: Laying the Foundation for Your Marketplace Journey
+On the first day, I planned how to start building my project and outlined the steps to proceed.
+
+Day 2: Technical Approach
+On the second day, I worked on the technical aspects of the project. I created a three-step plan:
+
+Front-End
+Database (Schema)
+APIs
+Day 3: API Integration & Data Migration
+On the third day, I integrated APIs into my project and migrated data to Sanity.
+
+Day 4: Building Dynamic Front-End Components
+On the fourth day, I focused on creating dynamic front-end components to make the website more appealing and user-friendly.
+
+Day 5: Testing & Error Handling
+On the fifth day, I tested the website to ensure responsiveness and performance, and I resolved any errors that arose.
+
+Day 6: Deployment & Environmental Setup
+On the sixth day, I prepared the project for deployment and ensured the environment was properly configured.
+
+Day 7: Live Deployment & Post-Launch
+On the final day, I successfully deployed the project and submitted it.
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
